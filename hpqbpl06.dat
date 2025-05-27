@@ -1,0 +1,79 @@
+[CopyFiles]
+1=hpzscr01.exe,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=hpqhsc01.dat,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+3=hpzmsi01.exe,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+4=hpqrrx08.exe,%sourcepath%util\ccc,%InstallMain%\ExtCapUninstall
+[CopyFiles.0x1]
+1=IsDialogBannerRTL.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBitmapRTL.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0xd]
+1=IsDialogBannerRTL.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBitmapRTL.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x5]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x6]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x7]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x8]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x9]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0xA]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0xB]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0xC]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0xE]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x10]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x11]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x12]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x13]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x14]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x15]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x16]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x19]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x1D]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x1F]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x804]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[CopyFiles.0x404]
+1=IsDialogBitmap.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+2=IsDialogBanner.jpg,%sourcepath%setup,%InstallDirX86%Digital Imaging\ExtCapUninstall
+[Version]
+Provider=HP
+WebUpdateName=Uninstaller for HP CustomerExperience
+WebUpdateKey=Uninstaller for CustomerExperience
+DriverVer=05/19/2009, 130.000.108.000

@@ -1,0 +1,2441 @@
+[SUI]
+Opt-In_Default=ON
+[Recovery.Startup]
+1=%Recovery%setup\hpzrcv01.exe -f ..\%autorunName% -recover
+[LGC]
+ZipFileLocation=%temp%
+[OSBlock.490]
+launchbase=Setup\
+1=hpzchk01.exe
+[LGC.Files.35]
+1=hpzinstall.log
+2=HP\Installer\%RenamedAutorunFolder%\*.*
+[LGC.Analyze]
+1=%logspath%hpz*.log
+2=%windows%Temp\hp*.log
+3=%usertemp%hp*.log
+[FilesThatForceReboot]
+1=mscoree.dll
+2=MICROS~1.NET\FRAMEW~1\V11~1.432
+3=Microsoft.NET\Framework\v1.1.4322
+[LGC.Launch]
+1=%windows%regedit.exe -e %logspath%sw_hp.reg HKEY_LOCAL_MACHINE\Software\Hewlett-Packard
+2=%windows%regedit.exe -e %logspath%sw_unins.reg HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall
+3=%windows%regedit.exe -e %logspath%enum9X.reg HKEY_LOCAL_MACHINE\Enum
+4=%windows%regedit.exe -e %logspath%enumNT.reg HKEY_LOCAL_MACHINE\System\CurrentControlSet\Enum
+5=%windows%regedit.exe -e %logspath%Print.reg HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Print
+6=%windows%regedit.exe -e %logspath%ClassNT.reg HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Class
+7=%windows%regedit.exe -e %logspath%Class9X.reg HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class
+8=%system%cmd.exe /C "%system%sc.exe query state= all >%logspath%Services.log"
+9=%system%cmd.exe /C "%system%tasklist.exe -fo table /v >%logspath%Processes.log"
+[LGC.Launch.501_64]
+10=%windows%regedit.exe -e %logspath%sw_hp_wow64.reg HKEY_LOCAL_MACHINE\Software\Wow6432Node\Hewlett-Packard
+11=%windows%regedit.exe -e %logspath%sw_unins_wow64.reg HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+[LGC.Launch.502_64]
+10=%windows%regedit.exe -e %logspath%sw_hp_wow64.reg HKEY_LOCAL_MACHINE\Software\Wow6432Node\Hewlett-Packard
+11=%windows%regedit.exe -e %logspath%sw_unins_wow64.reg HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+[LGC.Files]
+1=%windows%setupapi.log
+2=%windows%hp?ins??.dat
+3=%logspath%hp*.log
+4=%logspath%hp*.txt
+5=%windows%temp\hp*.log
+6=%logspath%sw_*.reg
+7=%logspath%enum*.reg
+8=%logspath%msievent.log
+9=%logspath%msinfo.nfo
+10=%logspath%E.S.C*.log
+11=%windows%temp\hp*.txt
+12=%system%$winnt$.inf
+13=%logspath%print.reg
+14=%logspath%class*.reg
+15=%logspath%windows_inf_files.log
+16=%windows%hp?mdl??.dat
+17=%logspath%BoiseNetWiz*.*
+18=%WindowsDrive%Temp\BoiseNetWiz*.*
+19=%logspath%hp*.htm
+20=%logspath%setup*.log
+21=%windows%DPInst.log
+22=%windows%inf\setupapi.app.log
+23=%windows%inf\setupapi.dev.log
+24=%windows%temp\ProductContext*.log
+25=%usertemp%hp*.log
+26=%usertemp%hp*.txt
+27=%logspath%Processes.log
+28=%logspath%Services.log
+[Strings]
+%DTSS_ProductSeries%=Shop for HP Supplies
+%ProductSpecificGUID%=%CDGuid%
+%pcipath%=%InstallMain%\%CDGuid%\Product\
+%InstallMainBin%=%InstallMain%\bin
+%CUEVersion%=13.0
+%Preload%=%InstallDirx86%Digital Imaging\%CDGuid%\
+%ICETemp%=%ProgramFilesx86%%ICETempInPF%\
+%ICETempInPF%=%Manufacturer%\Temp\%CDGuid%
+%Recovery%=%ICETemp%
+%RecoveryInPF%=%ICETempInPF%
+%Preloadx86%=%InstallDirx86%Digital Imaging\%CDGuid%\
+%InstallMain%=%InstallDirx86%Digital Imaging\
+%autorunlocation%=.
+%setupName%=hpzsetup.exe
+%setupStubName%=hpzstub.exe
+%DlgBmpExt%=.jpg
+%MSIRollbackDatFile%=hpzmsirb.dat
+%DeviceInstanceRollbackFile%=hpzdirb.dat
+%SacabodLocationX86%=%PreloadX86%Setup\Networkx86
+%SacabodLocationX64%=%PreloadX86%Setup\Networkx64
+%diagnosticlocationx64%=%preloadx86%setup\networkx64
+%diagnosticlocationx86%=%preloadx86%setup\networkx86
+%ProductScrubberDatfile%=hpqbud16.dat
+%DTSSVersion%=9.0
+%DTSSGUID%={D9C0C743-D9F1-4569-A449-474ACAAC1665}
+%DTSS_COEXIST_RELEASE_NUM%=16
+%DTSSDisplayName%=Shop for HP Supplies
+%DTSSUninstallKey%=Shop for HP Supplies
+[Strings.0x1]
+%DTSS_ProductSeries%=ÊÓæŞ Úä ãÓÊáÒãÇÊ HPş
+%DlgBmpExt%=RTL.jpg
+[Strings.0x5]
+%DTSS_ProductSeries%=Nakupujte spotøebního materiálu HP
+[Strings.0x6]
+%DTSS_ProductSeries%=Køb HP-forbrugsvarer
+[Strings.0x7]
+%DTSS_ProductSeries%=Shop für HP Zubehör
+[Strings.0x8]
+%DTSS_ProductSeries%=ÁãïñÜ áíáëùóßìùí HP
+[Strings.0x9]
+%DTSS_ProductSeries%=Shop for HP Supplies
+[Strings.0xa]
+%DTSS_ProductSeries%=Comprar consumibles HP
+[Strings.0xc]
+%DTSS_ProductSeries%=Achat de consommables HP
+[Strings.0xd]
+%DTSS_ProductSeries%=øëéùú çåîøéí îúëìéí ùì HP
+%DlgBmpExt%=RTL.jpg
+[Strings.0xe]
+%DTSS_ProductSeries%=HP-kellékek vásárlása
+[Strings.0x10]
+%DTSS_ProductSeries%=Acquisto di materiali di consumo HP
+[Strings.0x11]
+%DTSS_ProductSeries%=HP ƒTƒvƒ‰ƒC•i‚Ìw“ü
+[Strings.0x12]
+%DTSS_ProductSeries%=HP ¼Ò¸ğÇ° ±¸¸Å
+[Strings.0x13]
+%DTSS_ProductSeries%=HP-benodigdheden kopen
+[Strings.0x14]
+%DTSS_ProductSeries%=Handle HP-rekvisita
+[Strings.0x15]
+%DTSS_ProductSeries%=Zakup materia³ów eksploatacyjnych HP
+[Strings.0x16]
+%DTSS_ProductSeries%=Comprar suprimentos HP
+[Strings.0x19]
+%DTSS_ProductSeries%=Ïîêóïêà ğàñõîäíûõ ìàòåğèàëîâ HP
+[Strings.0x1d]
+%DTSS_ProductSeries%=Köp HP-tillbehör
+[Strings.0x1f]
+%DTSS_ProductSeries%=HP Sarf Malzemeleri için Mağaza
+[Strings.0x804]
+%DTSS_ProductSeries%=¹ºÂò HP ºÄ²Ä
+[Strings.0x404]
+%DTSS_ProductSeries%=ÁÊ¶R HP ¯Ó§÷
+[RunAs]
+launchbase=Setup\
+Qualifier=%OS%
+[RunAs.501_64]
+launchbase=Setup\
+1=hpzchk01.exe
+[RunAs.500]
+launchbase=Setup\
+1=hpzchk01.exe
+[RunAs.501]
+launchbase=Setup\
+1=hpzchk01.exe
+[LGC.DirCapture]
+GetSize=Yes
+GetVersion=Yes
+GetLastModifiedDate=Yes
+Log=%logspath%hp_files.log
+1=%windows%INF\*
+2=%installdir%*
+[LanguageMap]
+0x0409=enu
+0x0404=cht
+0x0804=chs
+0x0405=csy
+0x0406=dan
+0x0407=deu
+0x0408=ell
+0x040a=esn
+0x040b=fin
+0x040c=fra
+0x040e=hun
+0x0410=ita
+0x0411=jpn
+0x0412=kor
+0x0413=nld
+0x0414=nob
+0x0415=plk
+0x0416=ptb
+0x0419=rus
+0x041d=sve
+0x041f=trk
+0x0c04=cht
+0x1004=chs
+0x1404=cht
+0x0813=nld
+0x0809=enu
+0x0c09=enu
+0x1009=enu
+0x1409=enu
+0x1809=enu
+0x1c09=enu
+0x2009=enu
+0x2409=enu
+0x2809=enu
+0x2c09=enu
+0x080c=fra
+0x0c0c=fra
+0x100c=fra
+0x140c=fra
+0x180c=fra
+0x0456=esn
+0x0807=deu
+0x0c07=deu
+0x1007=deu
+0x1407=deu
+0x0810=ita
+0x0812=kor
+0x0c0a=esn
+0x080a=esn
+0x100a=esn
+0x140a=esn
+0x180a=esn
+0x1c0a=esn
+0x200a=esn
+0x240a=esn
+0x280a=esn
+0x2c0a=esn
+0x300a=esn
+0x340a=esn
+0x380a=esn
+0x3c0a=esn
+0x400a=esn
+0x440a=esn
+0x480a=esn
+0x4c0a=esn
+0x500a=esn
+0x042d=esn
+0x0403=esn
+0x081d=sve
+0x0422=rus
+0x0816=ptb
+0x040d=heb
+0x041e=xxx
+0x0401=ara
+0x0801=ara
+0x0c01=ara
+0x1001=ara
+0x1401=ara
+0x1801=ara
+0x1c01=ara
+0x2001=ara
+0x2401=ara
+0x2801=ara
+0x2c01=ara
+0x3001=ara
+0x3401=ara
+0x3801=ara
+0x3c01=ara
+0x4001=ara
+[InternetSettings]
+1=WUP
+2=SmartHints
+[SmartHints.Content]
+Key=HKEY_LOCAL_MACHINE\Software\%RegistryManufacturer%\InternetPrivacySettings
+Value=Content
+Type=REG_SZ
+OptInData=Yes
+OptOutData=No
+[SmartHints.Content.601_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.Content.501_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.Content.502_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.Content.600_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.OptAlert]
+1=Content
+2=Metrics
+[SmartHints.Metrics]
+Key=HKEY_LOCAL_MACHINE\Software\%RegistryManufacturer%\InternetPrivacySettings
+Value=Metrics
+Type=REG_SZ
+OptInData=No
+OptOutData=No
+[SmartHints.Metrics.601_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.Metrics.501_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.Metrics.502_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.Metrics.600_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints.OptIn]
+1=Content
+2=Metrics
+[SmartHints.OptOut]
+1=Content
+2=Metrics
+[WUP]
+SecondsToWaitForConnection=30
+SecondsToWaitForDownloadComplete=600
+Choice=Yes
+[WUP.HPSUDays]
+Key=HKEY_LOCAL_MACHINE\Software\%RegistryManufacturer%\HP Software Update
+Value=nDays
+OptInData=7
+OptAlertData=30
+OptOutData=30
+[WUP.HPSUDays.601_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUDays.501_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUDays.502_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUDays.600_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNever]
+Key=HKEY_LOCAL_MACHINE\Software\%RegistryManufacturer%\HP Software Update
+Value=Never
+OptInData=0
+OptAlertData=0
+OptOutData=1
+[WUP.HPSUNever.601_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNever.501_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNever.502_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNever.600_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNotify]
+Key=HKEY_LOCAL_MACHINE\Software\%RegistryManufacturer%\HP Software Update
+Value=Notify
+OptInData=1
+OptAlertData=0
+OptOutData=0
+[WUP.HPSUNotify.601_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNotify.501_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNotify.502_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.HPSUNotify.600_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\HP Software Update
+[WUP.OptAlert]
+1=ProductAssistantOpted
+2=ProductAssistantNever
+3=HPSUNotify
+4=HPSUDays
+5=HPSUNever
+6=Updates
+[WUP.OptIn]
+1=ProductAssistantOpted
+2=ProductAssistantNever
+3=HPSUNotify
+4=HPSUDays
+5=HPSUNever
+6=Updates
+[WUP.OptOut]
+1=ProductAssistantOpted
+2=ProductAssistantNever
+3=HPSUNotify
+4=HPSUDays
+5=HPSUNever
+6=Updates
+[WUP.ProductAssistantNever]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\%RegistryManufacturer%\HP Software Update\Product Assistant
+Value=Never
+OptInData=0
+OptAlertData=0
+OptOutData=1
+[WUP.ProductAssistantNever.601_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\HP Software Update\Product Assistant
+[WUP.ProductAssistantNever.501_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\HP Software Update\Product Assistant
+[WUP.ProductAssistantNever.502_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\HP Software Update\Product Assistant
+[WUP.ProductAssistantNever.600_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\HP Software Update\Product Assistant
+[WUP.ProductAssistantOpted]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\%RegistryManufacturer%\Product Assistant
+Value=OptInCompleted
+OptInData=1
+OptAlertData=1
+OptOutData=1
+[WUP.ProductAssistantOpted.601_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\Product Assistant
+[WUP.ProductAssistantOpted.501_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\Product Assistant
+[WUP.ProductAssistantOpted.502_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\Product Assistant
+[WUP.ProductAssistantOpted.600_64]
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\%RegistryManufacturer%\Product Assistant
+[WUP.Updates]
+Key=HKEY_LOCAL_MACHINE\Software\%RegistryManufacturer%\InternetPrivacySettings
+Value=Updates
+Type=REG_SZ
+OptInData=Yes
+OptAlertData=Alert
+OptOutData=No
+[WUP.Updates.601_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[WUP.Updates.501_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[WUP.Updates.502_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[WUP.Updates.600_64]
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\%RegistryManufacturer%\InternetPrivacySettings
+[SmartHints]
+Choice=Yes
+[TwoLetterLanguageMap]
+ara=ar
+cht=zh
+chs=zh
+csy=cs
+dan=da
+deu=de
+ell=el
+enu=en
+esn=es
+fin=fi
+fra=fr
+heb=he
+hun=hu
+ita=it
+jpn=ja
+kor=ko
+nld=nl
+nob=no
+plk=pl
+ptb=pt
+rus=ru
+sve=sv
+trk=tr
+[Recovery.Recover]
+1=%Recovery%Setup\hpzscr%ICE_SUFFIX%.exe -datfile .\%ProductScrubberDatfile% -d MsiUninstaller -unattended -forcereboot
+[LaunchIfNotReboot]
+1=%InstallMainBin%hpqtra08.exe
+[Recovery.Run4.Recover]
+1=%Recovery%Setup\hpzscr%ICE_SUFFIX%.exe -datfile %DeviceInstanceRollbackFile% -unattended -forcereboot
+[Recovery.MSIOnly.Startup]
+1=%recovery%setup\hpzrcv01.exe -f ..\%autorunName% -recover MSIOnly -logs
+[CloseTrayApp]
+Open=%InstallMainBin%hpqtra08.exe -shutDown
+[ARP.SuppressRebootList]
+hpzscr01.exe=-noreboot
+hpzscr40.exe=-noreboot
+msiexec.exe=Reboot="ReallySuppress"
+[LGC.Fail]
+1=## Exit code=
+2=LaunchApp failed with pCommandLine
+[Recovery.MSIOnly.Error_Failure_Cleanup]
+launchbase=%recovery%Setup\
+1=hpzrcv01.exe -recover MSIOnly -logs
+[OSBlock.410]
+launchbase=Setup\
+1=hpzchk01.exe
+[Network.PostInstallFirewallExceptionList]
+1=%InstallMainBin%hpqtra08.exe
+2=%InstallMainBin%hpqste08.exe
+3=%InstallMainBin%hpofxm08.exe
+4=%InstallMainBin%hposfx08.exe
+5=%InstallMainBin%hposid01.exe
+6=%InstallMainBin%hpqscnvw.exe
+7=%InstallMainBin%hpqkygrp.exe
+8=%InstallMainBin%hpqcopy2.exe
+9=%InstallMainBin%hpfccopy.exe
+10=%InstallMainBin%hpzwiz01.exe
+11=%InstallMainBin%hpoews01.exe
+12=%InstallMainBin%hpqnrs08.exe
+13=%InstallMainBin%Hpiscnapp.exe
+14=%ProgramFilesx86%Common Files\HP\Digital Imaging\bin\hpqphotocrm.exe
+15=%InstallMainBin%hpqsudi.exe
+16=%InstallMainBin%hpqpsapp.exe
+17=%InstallMainBin%hpofxs08.exe
+18=%InstallMainBin%hpqfxt08.exe
+19=%InstallMainBin%Hpqpse.exe
+20=%InstallMainBin%hpqgplgtupl.exe
+21=%InstallMainBin%hpqgpc01.exe
+22=%InstallMainBin%hpqusgm.exe
+23=%InstallMainBin%hpqusgh.exe
+24=%InstallDirx86%HP Software Update\Hpwucli.exe
+25=%InstallDirx86%Digital Imaging\smart web printing\SmartWebPrintEXE.exe
+[Recovery.SetupQuit]
+launchbase=%sourcepath%Setup\
+1=hpzrcv01.exe -unsetrecovery
+[OSBlock.400]
+launchbase=Setup\
+1=hpzchk01.exe
+[LGC.Include]
+1=Maximum path allowed =
+2=## Could not copy
+3=doesn;t exists
+4=hpzmsi01.exe)## EnsureValidPath(
+5=hpzmsi40.exe)## EnsureValidPath(
+6=## Exit code=-1073740186
+[setup.bitmap]
+TopRTL=%sourcepath%setup\IsDialogBannerRTL.jpg
+Top=%sourcepath%setup\IsDialogBanner.jpg
+centerRTL=%sourcepath%setup\IsDialogBitmapRTL.jpg
+center=%sourcepath%setup\IsDialogBitmap.jpg
+SecondsToShow=10
+1=%sourcepath%setup\HP_Rebrand_General_thankyou.jpg
+2=%sourcepath%setup\HP_Rebrand_General_smartdeals.jpg
+3=%sourcepath%setup\HP_Rebrand_General_totalcare.jpg
+[Recovery.MSIOnly.Recover]
+SWOnly=Yes
+1=%Recovery%Setup\hpzscr%ICE_SUFFIX%.exe -datfile %MsiRollbackDatFile% -unattended -forcereboot
+[MSI]
+Launchbase=msiexec.exe
+InstallDir=%ProgramFilesx86%%Manufacturer%\
+commandline=ICE_SUFFIX=%ICE_SUFFIX%
+[SystemRequirements]
+AdminRightRequired=1
+installspace=916
+SectionList=DTSSList
+[SystemRequirements.601]
+AdminRightRequired=0
+MinBuildNumber=7000
+RecBuildNumber=7000
+[SystemRequirements.601_64]
+AdminRightRequired=0
+MinBuildNumber=7000
+RecBuildNumber=7000
+[SystemRequirements.500]
+installspace=370
+[SystemRequirements.600_64]
+MinBuildNumber=6000
+RecBuildNumber=6000
+[SystemRequirements.600]
+MinBuildNumber=6000
+RecBuildNumber=6000
+[Run.SetRecovery]
+launchbase=%sourcepath%setup\
+1=hpzprl%ICE_SUFFIX%.exe -m PreloadRecoveryMechanism
+2=hpzrcv01.exe -setrecovery
+[Run.CommitFull]
+launchbase=%sourcepath%setup\
+1=hpzmsi01.exe -commit
+2=hpzrcv01.exe -unsetrecovery
+[Recovery.LogAnalysis]
+CollectLogs=Yes
+[LGC.PlugInLaunch]
+1=Launching app
+2=Now Launching
+3=Finished with main software install.
+4=Starting PSL
+[Version]
+UI_03=No
+UI_20=No
+UI_25=No
+UI_30=Yes
+UI_50=Yes
+UI_80=Yes
+UI_250=No
+UI_260=No
+UI_40=Yes
+UI_60=Yes
+UI_70=Yes
+UI_110=Yes
+UI_100=Yes
+UI_65=Yes
+Provider=HP
+Pre-Install=%ProgramFilesx86%%Manufacturer%
+maxpathforcd=100
+MaxInstallDirLength=64
+ConnectivityStopAndRestart=%InstallMainBin%hpqtra08.exe
+InvalidPathCharacters=#$&,%`;'
+DeviceType=Printer
+HelpFile=%sourcepath%\help\%lang%\HP_Setup_Help.chm
+DefaultLanguageInThisRelease=enu
+LanguagesInthisCD=ara,chs,cht,csy,dan,deu,ell,enu,esn,fin,fra,heb,hun,ita,jpn,kor,nld,nob,plk,ptb,rus,sve,trk
+productfinishevent=
+setupfinishevent=
+Division=hpq
+Manufacturer=HP
+RegistryManufacturer=Hewlett-Packard
+DriverVer=05/14/2009, 130.000.107.000
+ProductSeries=Shop for HP Supplies
+COEXIST_RELEASE_NUM=16
+CDGUID={D9C0C743-D9F1-4569-A449-474ACAAC1665}
+PreloadRecoveryMechanism=hpzprl02.dat
+[setup.bitmap.text]
+1=[%lang%] Thank you for choosing HP
+2=[%lang%] Visit HP Smart Deals for FREE downloads and Big Savings for HP customers
+3=[%lang%] Your HP product is backed by HP Total Care - Award Winning Service and Support
+[setup.bitmap.text.0x1]
+1=ÔßÑğÇ Úáì ÇÎÊíÇÑß HP
+2=ÒÑ HP Smart Deals (ÍãáÇÊ HP ÇáĞßíÉ) ááÍÕæá Úáì ÇáÊäÒíáÇÊ ÇáãÌÇäíÉ æÇáÎÕæã ÇáåÇÆáÉ ÇáãæİÑÉ áÚãáÇÁ HP
+3=Åä ãäÊÌß ãÏÚæã ãä ŞÈá ÇáÚäÇíÉ ÇáÔÇãáÉ ãä ıHP - ÎÏãÉ æÏÚã ÍÇÕáÇä Úáì ÌæÇÆÒ
+[setup.bitmap.text.0x5]
+1=Dìkujeme vám, e jste si vybrali HP
+2=Navštivte HP Smart Deals a získejte informace o BEZPLATNİCH aplikacích ke staení a Vıznamnıch úsporách pro zákazníky HP
+3=Na váš produkt HP se vztahuje Komplexní péèe HP - oceòovanı servis a podpora
+[setup.bitmap.text.0x6]
+1=Tak, fordi du har valgt HP
+2=Besøg HP Smart Deals, hvor du finder GRATIS downloads og store besparelser for HP-kunder
+3=Dit HP-produkt er omfattet af HP Total Care - prisbelønnet service og support
+[setup.bitmap.text.0x7]
+1=Danke, dass Sie sich für HP entschieden haben
+2=HP Smart Deals für KOSTENLOSE Downloads und hohe Einsparungen für HP Kunden besuchen
+3=Für Ihr HP Produkt ist HP Total Care, der preisgekrönte Service und Support verfügbar
+[setup.bitmap.text.0x8]
+1=Óáò åõ÷áñéóôïıìå ğïõ åğéëİîáôå ôçí HP
+2=Åğéóêåöèåßôå ôï HP Smart Deals ãéá ÄÙÑÅÁÍ ëŞøåéò êáé óçìáíôéêİò äõíáôüôçôåò åîïéêïíüìçóçò ãéá ôïõò ğåëÜôåò ôçò HP
+3=Ç óõóêåõŞ óáò HP âáóßæåôáé óôç âñáâåõìİíç åîõğçñİôçóç êáé õğïóôŞñéîç HP Total Care
+[setup.bitmap.text.0x9]
+1=Thank you for choosing HP
+2=Visit HP Smart Deals for FREE downloads and Big Savings for HP customers
+3=Your HP product is backed by HP Total Care - Award Winning Service and Support
+[setup.bitmap.text.0xa]
+1=Gracias por elegir HP
+2=Visite HP Smart Deals para obtener descargas GRATUITAS y grandes ahorros para clientes de HP
+3=Su producto HP está respaldado por HP Total Care - Servicio y soporte ganardonado
+[setup.bitmap.text.0xb]
+1=Kiitos, että valitsit HP:n
+2=HP Smart Deals -sivuilta saat ILMAISIA latauksia ja HP:n asiakkaille suunnattuja säästötarjouksia
+3=HP-tuotteesi suojana on HP Total Care - Palkittu palvelu ja tuki
+[setup.bitmap.text.0xc]
+1=Merci d'avoir choisi HP
+2=Visitez le site HP Smart Deals pour obtenir des téléchargements GRATUITS et réaliser des économies exceptionnelles réservées aux clients HP
+3=Votre produit HP est couvert par l'assistance "HP Total Care - Award Winning Service and Support"
+[setup.bitmap.text.0xd]
+1=úåãä òì ùáçøú á-HP
+2=á÷ø á-HP Smart Deals ìäåøãåú ììà úùìåí åìçéñëåï ğéëø ìì÷åçåú HP
+3=îåöø HP ùáøùåúê îâåáä òì-éãé HP Total Care - ùéøåú åúîéëä òèåøé ôøñéí
+[setup.bitmap.text.0xe]
+1=Köszönjük, hogy a HP-t választotta
+2=A HP Smart Deals INGYENES letöltéseket és jelentõs megtakarításokat kínál a HP ügyfeleinek
+3=HP termékét a HP Total Care - a díjnyertes szolgáltatás és támogatás - támogatja
+[setup.bitmap.text.0x10]
+1=Grazie per aver scelto HP
+2=Visita HP Smart Deals per download GRATUITI e offerte eccezionali per i clienti HP
+3=Il prodotto HP può contare sull'assistenza di HP Total Care - Servizio di supporto senza rivali
+[setup.bitmap.text.0x11]
+1=HP »•i‚ğ‚¨‘I‚Ñ‚¢‚½‚¾‚«‚ ‚è‚ª‚Æ‚¤‚²‚´‚¢‚Ü‚·
+2=HP ‚Ì‚¨‹q—lŒü‚¯‚Ì–³—¿ƒ_ƒEƒ“ƒ[ƒh‚Æ‚¨”ƒ‚¢“¾î•ñ‚É‚Â‚¢‚Ä‚ÍAHP Smart Deals ‚ÉƒAƒNƒZƒX‚µ‚Ä‚­‚¾‚³‚¢
+3=HP »•i‚ÍAÜ‚ğŠl“¾‚µ‚½ƒT[ƒrƒX‚ÆƒTƒ|[ƒgAHP ƒg[ƒ^ƒ‹ ƒPƒA‚É‚æ‚Á‚Äx‚¦‚ç‚ê‚Ä‚¢‚Ü‚·
+[setup.bitmap.text.0x12]
+1=HP¸¦ ¼±ÅÃÇØÁÖ¼Å¼­ °¨»çµå¸³´Ï´Ù
+2=HP °í°´ÀÌ¶ó¸é HP Smart Deals¿¡¼­ ¹«·á ´Ù¿î·Îµå¿Í Å« ºñ¿ë Àı°¨ ¼­ºñ½º¸¦ ¹ŞÀ» ¼ö ÀÖ½À´Ï´Ù
+3=¸¹Àº ¼ö»ó °æ·ÂÀ» ÀÚ¶ûÇÏ´Â ¼­ºñ½º ¹× Áö¿øÀ» Á¦°øÇÏ´Â HP Total Care·Î HP Á¦Ç°À» Áö¿øÇÕ´Ï´Ù
+[setup.bitmap.text.0x13]
+1=Bedankt dat u voor HP hebt gekozen
+2=Bezoek HP Smart Deals voor GRATIS downloads en enorme besparingen voor klanten van HP
+3=Uw HP-product wordt ondersteund door HP Total Care - Bekroonde service en ondersteuning
+[setup.bitmap.text.0x14]
+1=Takk for at du valgte HP
+2=Besøk HP Smart Deals, som tilbyr GRATIS nedlastinger og store besparelser til HP-kunder
+3=HP-produktet ditt støttes av HP Total Care - prisvinnende service og støtte
+[setup.bitmap.text.0x15]
+1=Dziêkujemy za wybranie HP
+2=Wyœwietl HP Smart Deals z BEZP£ATNYMI plikami do pobrania i zni¿kami dla klientów HP
+3=Twoje urz¹dzenie HP posiada wsparcie HP Total Care - Nagradzany system serwisu i pomocy technicznej
+[setup.bitmap.text.0x16]
+1=Obrigado por escolher a HP
+2=Visite o HP Smart Deals para acessar downloads GRATUITOS e grandes ofertas para os clientes HP
+3=Seu produto HP tem o suporte do HP Total Care - Suporte e Serviço Premiados
+[setup.bitmap.text.0x19]
+1=Áëàãîäàğèì çà âûáîğ HP
+2=Ïîñåòèòå âåá-óçåë HP Smart Deals äëÿ ÁÅÑÏËÀÒÍÎÉ çàãğóçêè ôàéëîâ è äîñòóïà ê âûãîäíûì ïğåäëîæåíèÿì HP
+3=Äëÿ óñòğîéñòâà HP äîñòóïíû îòìå÷åííûå íàãğàäàìè óñëóãè ïî îáñëóæèâàíèş è ïîääåğæêå HP Total Care
+[setup.bitmap.text.0x1d]
+1=Tack för att du väljer HP
+2=Gå till Smarta HP-affärer för HP-kunder om du vill ha GRATIS nedladdningar och möjlighet att göra stora besparingar
+3=Din HP-produkt backas upp av HP Total Care - prisbelönt service och support
+[setup.bitmap.text.0x1f]
+1=HP'yi seçtiğiniz için teşekkür ederiz
+2=ÜCRETSİZ indirmeler HP müşterileri için Büyük Fırsatlar için HP Akıllı Alışveriş'i ziyaret edin
+3=HP ürününüz HP Total Care ile desteklenmektedir- Ödüllü Servis ve Destek
+[setup.bitmap.text.0x804]
+1=¸ĞĞ»ÄúÑ¡Ôñ HP
+2=·ÃÎÊ HP Smart Deals ÒÔÁË½âÃâ·ÑÏÂÔØºÍ HP ¿Í»§µÄÌØÊâÓÅ»İ
+3=HP ²úÆ·ÊÜµ½ÈÙ»ñ·şÎñºÍÖ§³Ö½±µÄ HP Total Care µÄÖ§³Ö
+[setup.bitmap.text.0x404]
+1=·PÁÂ±z¿ï¾Ü HP
+2=³y³X HP Smart Deals ¨ú±o°w¹ï HP «È¤áªº§K¶O¤U¸ü¥H¤Î¯S´f¤è®×
+3=±zªº HP ²£«~¨ü¨ì HP Total Care ªº¤ä´©¡A¥¦¬OÀò¼úªºªA°È©M¤ä´©
+[LGC.Exclude]
+1=## MsiOpenDatabase ((null)) failed :
+2=## The is another copy of setup.exe running
+3=## Found DeviceID=
+4=## GetFileVersionInfoSize failed with The specified image file did not contain a resource section.
+5=None.msi.1) failed
+6=## We have timed out waiting for plug n play.
+7=## LoadStringListFromValue(Scrubber
+8=## GetValueByLang(
+9=## GetFileVersionInfoSize failed with The specified resource type cannot be found in the image file
+10=## GetFileVersionInfoSize failed with An attempt was made to load a program with
+11=## GetFileVersionInfoSize failed with ERR_NOERROR
+12=## GetFileVersionInfoSize failed with The specified path is invalid.
+13=## CAiONetworkDriveUninstaller:Could NOT look-up value
+14=-unsetrecovery
+15=-recover
+16=## Failed to find path to '
+17=setup\hpzscr01.exe -datfile
+18=setup\hpzscr40.exe -datfile
+19=## GetFileVersionInfoSize failed with The specified image file did not contain a resource section.
+20=hpzrcv01.exe
+21=## Could not open process
+22=## GetEffectiveRightsFromAcl failed with 1355
+23=hpzchk01.exe)##
+24=hpzscr01.exe)##
+25=hpzscr40.exe)##
+26=## EnsureValidPath(_msiFilename) failed
+27=hpzmsi01.exe -commit
+28=hpzmsi40.exe -commit
+29=## Max time and min time need to be greater than 0.
+30=hpzgat01.exe)## Could not send message to setup to
+31=## GlobalAddAtom didn't give us an atom for
+32=HPeSupport.dll failed to unregister.
+33=## Not enough parameters were returned!
+34=hpzarp01.exe)## Could not open registry key
+35=## Unable to load IsWow64Process from _hKernel
+36=## There is another copy of setup.exe running
+[Option.RecommendedSolutions]
+1=Full
+[Option.Full]
+DTSSList=Yes
+[DTSSList]
+Required=Yes
+DisplayName=Shop for HP Supplies
+RequiresDisclaimer=yes
+BucketGuid={D9C0C743-D9F1-4569-A449-474ACAAC1665}
+Description=Provides direct, online access to purchase HP supplies.
+oslist=501,600,600_64,601,601_64
+minie=6.0.0.00000000
+minram=128
+MinDisk=14
+MinSysDisk=3
+InstallSpace=28
+qualifier=%OS%
+launchbase=%sourcepath%setup\
+1=hpzprl%ICE_SUFFIX%.exe -m DTSSList
+2=hpzarp01.exe -add DTSSList
+3=hpzmsi01.exe -list DTSSList -commit
+4=..\%SetupName% -CommitGuid %BucketGuid%
+5=..\%setupName% -CommitGuid -m Old_DTSSList_Guids
+[Run1]
+launchbase=%sourcepath%setup\
+1=hpzpnp%ICE_SUFFIX%.exe
+2=hpzrein01.exe
+3=hpznop01.exe -PostRegisteredMessage WM_START_BITMAP_TIMER
+4=hpzwup01.exe
+[Run2]
+launchbase=%sourcepath%setup\
+1=hpzshl%ICE_SUFFIX%.exe -m HPSecurity
+2=hpznop01.exe -storeprivacysettings
+3=hpzshl%ICE_SUFFIX%.exe -m DelayedRebootCUE,ICEPreShield
+4=[Run.SetRecovery]
+5=hpzwis01.exe
+[Run3]
+launchbase=%sourcepath%Setup\
+1=[BucketsAvailable]
+2=[Run.CommitFull]
+3=hpzfwx01.exe -m PostInstallFirewallExceptionList
+[Uninstall]
+launchbase=%sourcepath%Setup\
+1=hpzscr01.exe -datfile %ProductScrubberDatfile% -onestop
+[SystemRequirements.Min]
+SysReqPlugIn=%sourcepath%setup\hpzchk01.exe
+[MSI.DTSS]
+FileName=%sourcepath%setup\DTSS\HPSSupply.msi
+UI=No
+SkipIfSilent=No
+IgnoreReturnCode=No
+RefCount=Yes
+SkipOnReInstall=Never
+Logfilename=%Temp%%DIVISION%DTSS.log
+UpgradeCode={FE9B929E-3BAF-40B1-BFFC-3A078ABAA0C8}
+[Shield.DelayedRebootCUE]
+1=CUECheckForFiles
+[Shield.CUECheckForFiles]
+IssueType=RebootFile
+Manufacturer=HP
+Action=AutoFix
+Return=Reboot
+result=Reboot
+BlockIfFail=no
+1=Digital Imaging
+[Shield.HPSecurity]
+1=HP RegKey
+2=Hewlett-Packard RegKey
+3=Hewlett Packard RegKey
+4=LEAD Technologies RegKey
+5=WoW64 HP RegKey
+6=WoW64 Hewlett-Packard RegKey
+7=WoW64 Hewlett Packard RegKey
+8=WoW64 LEAD Technologies RegKey
+[Shield.HP RegKey.500]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.HP RegKey.501]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.HP RegKey.501_64]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.HP RegKey.600]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.HP RegKey.600_64]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.CommonSidList]
+S-1-5-32-544=0x000f003f
+S-1-5-18=0x000f003f
+S-1-5-32-545=0x00020019
+[Shield.Hewlett-Packard RegKey.500]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett-Packard RegKey.501]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett-Packard RegKey.501_64]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett-Packard RegKey.600]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett-Packard RegKey.600_64]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett Packard RegKey.500]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett Packard RegKey.501]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett Packard RegKey.501_64]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett Packard RegKey.600]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.Hewlett Packard RegKey.600_64]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.LEAD Technologies RegKey.500]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.LEAD Technologies RegKey.501]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.LEAD Technologies RegKey.501_64]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.LEAD Technologies RegKey.600]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.LEAD Technologies RegKey.600_64]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 HP RegKey.501_64]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 HP RegKey.600_64]
+IssueType=RegKey
+DisplayName=HP
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\HP
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 Hewlett-Packard RegKey.600_64]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 Hewlett-Packard RegKey.501_64]
+IssueType=RegKey
+DisplayName=Hewlett-Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Hewlett-Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 Hewlett Packard RegKey.600_64]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 Hewlett Packard RegKey.501_64]
+IssueType=RegKey
+DisplayName=Hewlett Packard
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Hewlett Packard
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 LEAD Technologies RegKey.600_64]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.WoW64 LEAD Technologies RegKey.501_64]
+IssueType=RegKey
+DisplayName=LEAD Technologies, Inc.
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LEAD Technologies, Inc.
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.ICEPreShield]
+1=SynTPEnh
+2=QTTask
+3=.NETUninstall
+4=CommonAdminTools
+5=MsiExec
+6=PlugPlay
+7=LocalSoftware
+8=LocalSystem
+9=EnumRegKey
+10=Config.Msi
+11=ICE RegKey
+12=ClassesRoot
+13=softpubDll
+14=wintrustDll
+15=initpkiDll
+16=cryptextDll
+17=dssenhDll
+18=rsaenhDll
+19=gpkcspDll
+20=sccbaseDll
+21=slbcspDll
+22=cryptdlgDll
+23=DevicePathRegValue
+24=Wow64LocalSoftware
+25=Wow64ClassRoot
+26=CryptSvc
+27=Wow64softpubDll
+28=Wow64wintrustDll
+29=Wow64dssenhDll
+30=Wow64rsaenhDll
+31=Wow64gpkcspDll
+32=Wow64sccbaseDll
+33=Wow64slbcspDll
+34=Wow64cryptdlgDll
+35=RegisterMSI
+36=RegisterMSI_Wow64
+37=MsiExecFile
+[Shield.SynTPEnh]
+IssueType=Process
+Manufacturer=HP
+Action=AutoFix
+MinVersion=0x0005000000000893
+MaxVersion=0x0005000000000893
+BlockIfFail=yes
+[Shield.QTTask]
+IssueType=Process
+Manufacturer=Apple
+Action=AutoFix
+MinVersion=0x0000000000000000
+MaxVersion=0x0006000100000000
+BlockIfFail=yes
+[Shield..NETUninstall]
+IssueType=RebootFile
+Manufacturer=Microsoft
+Action=AutoFix
+Return=Reboot
+BlockIfFail=no
+1=mscoree.dll
+2=MICROS~1.NET\FRAMEW~1\V11~1.432
+3=Microsoft.NET\Framework\v1.1.4322
+[Shield.CommonAdminTools]
+IssueType=RegData
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+Value=Common Administrative Tools
+Data=<Common Administrative Tools>.All Users\
+Condition=Contains
+Type=REG_EXPAND_SZ (EX)
+ReplaceWith=%ALLUSERSPROFILE%\Start Menu\Programs\Administrative Tools
+BlockIfFail=yes
+[Shield.MsiExec]
+IssueType=Service
+DisplayName=Windows Installer
+Manufacturer=Microsoft
+Action=Fix
+Condition=Disabled
+ServiceName=MSIServer
+BlockIfFail=yes
+AutoStartService=no
+[Shield.PlugPlay]
+IssueType=Service
+DisplayName=Plug and Play
+Manufacturer=Microsoft
+Action=Fix
+Condition=Stopped
+ServiceName=PlugPlay
+BlockIfFail=yes
+AutoStartService=no
+[Shield.LocalSoftware.500]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSoftware.501]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSoftware.501_64]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSoftware.600]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSoftware.600_64]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSystem.500]
+IssueType=RegKey
+DisplayName=LocalSystem
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSystem.501]
+IssueType=RegKey
+DisplayName=LocalSystem
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSystem.501_64]
+IssueType=RegKey
+DisplayName=LocalSystem
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSystem.600]
+IssueType=RegKey
+DisplayName=LocalSystem
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.LocalSystem.600_64]
+IssueType=RegKey
+DisplayName=LocalSystem
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.EnumRegKey.500]
+IssueType=RegKey
+DisplayName=Enum
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=SystemAccess
+SetAccess=SystemAccess
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.EnumRegKey.501]
+IssueType=RegKey
+DisplayName=Enum
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=SystemAccess
+SetAccess=SystemAccess
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.EnumRegKey.501_64]
+IssueType=RegKey
+DisplayName=Enum
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=SystemAccess
+SetAccess=SystemAccess
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.SystemAccess]
+S-1-1-0=0x00020019
+S-1-5-18=0x000f003f
+[Shield.Config.Msi]
+IssueType=Folder
+Manufacturer=Microsoft Corporation
+Action=AutoFix
+Condition=~Exists
+FolderName=%WindowsDrive%Config.Msi
+BlockIfFail=no
+Hidden=yes
+[Shield.ICE RegKey]
+IssueType=RegKey
+DisplayName=ICE
+Manufacturer=HP
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\ICE
+Condition=NotWriteable
+TimeOut=10
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=yes
+SetOnlyIfInValid=no
+CheckCreatedKey=no
+OverwriteDacl=yes
+BlockIfFail=yes
+[Shield.ClassesRoot.500]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.ClassesRoot.501]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.ClassesRoot.501_64]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.ClassesRoot.600]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.ClassesRoot.600_64]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.softpubDll.500]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s softpub.dll
+[Shield.softpubDll.501]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s softpub.dll
+[Shield.softpubDll.501_64]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s softpub.dll
+[Shield.softpubDll.600]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s softpub.dll
+[Shield.softpubDll.600_64]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s softpub.dll
+[Shield.wintrustDll.500]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s wintrust.dll
+[Shield.wintrustDll.501]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s wintrust.dll
+[Shield.wintrustDll.501_64]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s wintrust.dll
+[Shield.wintrustDll.600]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s wintrust.dll
+[Shield.wintrustDll.600_64]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s wintrust.dll
+[Shield.initpkiDll.500]
+IssueType=RegKey
+DisplayName=initpki.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{7444C717-39BF-11D1-8CD9-00C04FC29D45}\ProgID
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s initpki.dll
+[Shield.initpkiDll.501]
+IssueType=RegKey
+DisplayName=initpki.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{7444C717-39BF-11D1-8CD9-00C04FC29D45}\ProgID
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s initpki.dll
+[Shield.initpkiDll.501_64]
+IssueType=RegKey
+DisplayName=initpki.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{7444C717-39BF-11D1-8CD9-00C04FC29D45}\ProgID
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s initpki.dll
+[Shield.cryptextDll.600]
+IssueType=RegKey
+DisplayName=cryptext.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{7444C717-39BF-11D1-8CD9-00C04FC29D45}\ProgID
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptext.dll
+[Shield.cryptextDll.600_64]
+IssueType=RegKey
+DisplayName=cryptext.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{7444C717-39BF-11D1-8CD9-00C04FC29D45}\ProgID
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptext.dll
+[Shield.dssenhDll.500]
+IssueType=RegKey
+DisplayName=dssbase.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s dssbase.dll
+[Shield.dssenhDll.501]
+IssueType=RegKey
+DisplayName=dssenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s dssenh.dll
+[Shield.dssenhDll.501_64]
+IssueType=RegKey
+DisplayName=dssenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s dssenh.dll
+[Shield.dssenhDll.600]
+IssueType=RegKey
+DisplayName=dssenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s dssenh.dll
+[Shield.dssenhDll.600_64]
+IssueType=RegKey
+DisplayName=dssenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s dssenh.dll
+[Shield.rsaenhDll.500]
+IssueType=RegKey
+DisplayName=rsabase.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s rsabase.dll
+[Shield.rsaenhDll.501]
+IssueType=RegKey
+DisplayName=rsaenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s rsaenh.dll
+[Shield.rsaenhDll.501_64]
+IssueType=RegKey
+DisplayName=rsaenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s rsaenh.dll
+[Shield.rsaenhDll.600_64]
+IssueType=RegKey
+DisplayName=rsaenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s rsaenh.dll
+[Shield.rsaenhDll.600]
+IssueType=RegKey
+DisplayName=rsaenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s rsaenh.dll
+[Shield.gpkcspDll.500]
+IssueType=RegKey
+DisplayName=gpkcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Gemplus GemSAFE Card CSP v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s gpkcsp.dll
+[Shield.gpkcspDll.501]
+IssueType=RegKey
+DisplayName=gpkcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Gemplus GemSAFE Card CSP v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s gpkcsp.dll
+[Shield.gpkcspDll.501_64]
+IssueType=RegKey
+DisplayName=gpkcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Gemplus GemSAFE Card CSP v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s gpkcsp.dll
+[Shield.sccbaseDll.501]
+IssueType=RegKey
+DisplayName=sccbase.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Infineon SICRYPT Base Smart Card CSP
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s sccbase.dll
+[Shield.sccbaseDll.501_64]
+IssueType=RegKey
+DisplayName=sccbase.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Infineon SICRYPT Base Smart Card CSP
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s sccbase.dll
+[Shield.slbcspDll.500]
+IssueType=RegKey
+DisplayName=slbcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Schlumberger Cryptographic Service Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s slbcsp.dll
+[Shield.slbcspDll.501]
+IssueType=RegKey
+DisplayName=slbcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Schlumberger Cryptographic Service Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s slbcsp.dll
+[Shield.slbcspDll.501_64]
+IssueType=RegKey
+DisplayName=slbcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\Schlumberger Cryptographic Service Provider
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s slbcsp.dll
+[Shield.cryptdlgDll.500]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptdlg.dll
+[Shield.cryptdlgDll.501]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptdlg.dll
+[Shield.cryptdlgDll.501_64]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptdlg.dll
+[Shield.cryptdlgDll.600]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptdlg.dll
+[Shield.cryptdlgDll.600_64]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 /s cryptdlg.dll
+[Shield.DevicePathRegValue.500]
+IssueType=RegData
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
+Value=DevicePath
+Data=%SystemRoot%\inf
+Condition=Missing
+Type=REG_EXPAND_SZ (EX)
+ReplaceWith=%SystemRoot%\inf
+BlockIfFail=yes
+[Shield.DevicePathRegValue.501]
+IssueType=RegData
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
+Value=DevicePath
+Data=%SystemRoot%\inf
+Condition=Missing
+Type=REG_EXPAND_SZ (EX)
+ReplaceWith=%SystemRoot%\inf
+BlockIfFail=yes
+[Shield.DevicePathRegValue.501_64]
+IssueType=RegData
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
+Value=DevicePath
+Data=%SystemRoot%\inf
+Condition=Missing
+Type=REG_EXPAND_SZ (EX)
+ReplaceWith=%SystemRoot%\inf
+BlockIfFail=yes
+[Shield.DevicePathRegValue.600]
+IssueType=RegData
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
+Value=DevicePath
+Data=%SystemRoot%\inf
+Condition=Missing
+Type=REG_EXPAND_SZ (EX)
+ReplaceWith=%SystemRoot%\inf
+BlockIfFail=yes
+[Shield.DevicePathRegValue.600_64]
+IssueType=RegData
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
+Value=DevicePath
+Data=%SystemRoot%\inf
+Condition=Missing
+Type=REG_EXPAND_SZ (EX)
+ReplaceWith=%SystemRoot%\inf
+BlockIfFail=yes
+[Shield.Wow64LocalSoftware.501_64]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.Wow64LocalSoftware.600_64]
+IssueType=RegKey
+DisplayName=LocalSoftware
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.Wow64ClassRoot.501_64]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.Wow64ClassRoot.600_64]
+IssueType=RegKey
+DisplayName=HKEY_CLASSES_ROOT
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes
+Condition=NotWriteable
+CheckAccess=CommonSidList
+SetAccess=CommonSidList
+Recurse=no
+SetOnlyIfInValid=yes
+CheckCreatedKey=yes
+OverwriteDacl=no
+BlockIfFail=yes
+[Shield.CryptSvc.501]
+IssueType=Service
+DisplayName=Windows Cryptographic Service
+Manufacturer=Microsoft
+Action=AutoFix
+Condition=Stopped
+ServiceName=Cryptsvc
+BlockIfFail=yes
+AutoStartService=no
+[Shield.CryptSvc.501_64]
+IssueType=Service
+DisplayName=Windows Cryptographic Service
+Manufacturer=Microsoft
+Action=AutoFix
+Condition=Stopped
+ServiceName=Cryptsvc
+BlockIfFail=yes
+AutoStartService=no
+[Shield.CryptSvc.600_64]
+IssueType=Service
+DisplayName=Windows Cryptographic Service
+Manufacturer=Microsoft
+Action=AutoFix
+Condition=Stopped
+ServiceName=Cryptsvc
+BlockIfFail=yes
+AutoStartService=no
+[Shield.CryptSvc.600]
+IssueType=Service
+DisplayName=Windows Cryptographic Service
+Manufacturer=Microsoft
+Action=AutoFix
+Condition=Stopped
+ServiceName=Cryptsvc
+BlockIfFail=yes
+AutoStartService=no
+[Shield.Wow64softpubDll.501_64]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s softpub.dll
+[Shield.Wow64softpubDll.600_64]
+IssueType=RegKey
+DisplayName=softpub.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Cryptography\Providers\Trust\Initialization\{64B9D180-8DA2-11CF-8736-00AA00A485EB}
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s softpub.dll
+[Shield.Wow64wintrustDll.600_64]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s wintrust.dll
+[Shield.Wow64wintrustDll.501_64]
+IssueType=RegKey
+DisplayName=wintrust.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.2.1.15
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s wintrust.dll
+[Shield.Wow64dssenhDll.600_64]
+IssueType=RegKey
+DisplayName=dssenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s dssenh.dll
+[Shield.Wow64dssenhDll.501_64]
+IssueType=RegKey
+DisplayName=dssenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Microsoft Base DSS Cryptographic Provider
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s dssenh.dll
+[Shield.Wow64rsaenhDll.600_64]
+IssueType=RegKey
+DisplayName=rsaenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s rsaenh.dll
+[Shield.Wow64rsaenhDll.501_64]
+IssueType=RegKey
+DisplayName=rsaenh.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Microsoft Base Cryptographic Provider v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s rsaenh.dll
+[Shield.Wow64gpkcspDll.501_64]
+IssueType=RegKey
+DisplayName=gpkcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Gemplus GemSAFE Card CSP v1.0
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s gpkcsp.dll
+[Shield.Wow64sccbaseDll.501_64]
+IssueType=RegKey
+DisplayName=sccbase.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Infineon SICRYPT Base Smart Card CSP
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s sccbase.dll
+[Shield.Wow64slbcspDll.501_64]
+IssueType=RegKey
+DisplayName=slbcsp.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Defaults\Provider\Schlumberger Cryptographic Service Provider
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s slbcsp.dll
+[Shield.Wow64cryptdlgDll.501_64]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s cryptdlg.dll
+[Shield.Wow64cryptdlgDll.600_64]
+IssueType=RegKey
+DisplayName=cryptdlg.dll
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 1\CryptDllEncodeObject\1.3.6.1.4.1.311.16.1.1
+Condition=~Exists
+BlockIfFail=yes
+1=%SYSWOW64%regsvr32 /s cryptdlg.dll
+[Shield.RegisterMSI]
+IssueType=RegKey
+DisplayName=Windows Installer Registry
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{000C101C-0000-0000-C000-000000000046}
+Condition=~Exists
+BlockIfFail=yes
+1=%system%msiexec /regserver
+[Shield.RegisterMSI.600]
+IssueType=RegKey
+DisplayName=Windows Installer Registry
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_CLASSES_ROOT\CLSID\{000C101C-0000-0000-C000-000000000046}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 %system%msi.dll
+[Shield.RegisterMSI_Wow64.501_64]
+IssueType=RegKey
+DisplayName=Windows Installer Registry (Wow64)
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\CLSID\{000C101C-0000-0000-C000-000000000046}
+Condition=~Exists
+BlockIfFail=yes
+1=%syswow64%msiexec /regserver
+[Shield.RegisterMSI_Wow64.600_64]
+IssueType=RegKey
+DisplayName=Windows Installer Registry (Wow64)
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\CLSID\{000C101C-0000-0000-C000-000000000046}
+Condition=~Exists
+BlockIfFail=yes
+1=regsvr32 %syswow64%msi.dll
+[Shield.RegisterMSI_Wow64.502_64]
+IssueType=RegKey
+DisplayName=Windows Installer Registry (Wow64)
+Manufacturer=Microsoft
+Action=AutoFix
+Key=HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\CLSID\{000C101C-0000-0000-C000-000000000046}
+Condition=~Exists
+BlockIfFail=yes
+1=%syswow64%msiexec /regserver
+[Shield.MsiExecFile]
+IssueType=File
+DisplayName=Msiexec.exe
+Manufacturer=Microsoft Corporation
+Action=Stop
+Condition=~Exists
+FileName=%system%Msiexec.exe
+SpecialText=Shield.MsiexecFile.Text
+[Shield.MsiexecFile.Text]
+1=This system file is missing from %system% folder. You must repair the system using the operating system installation CD before continuing this installation.
+[Shield.MsiexecFile.Text.0x1]
+1=Åä ãáİ ÇáäÙÇã åĞÇ ãİŞæÏ ãä ÇáãÌáÏ %system%. íÌÈ ÅÕáÇÍ ÇáäÙÇã ÈÇÓÊÎÏÇã ŞÑÕ ÇáÊËÈíÊ ÇáãÖÛæØ æĞáß ŞÈá Ãä ÊÊãßä ãä ãÊÇÈÚÉ ÇáÊËÈíÊ.
+[Shield.MsiexecFile.Text.0x5]
+1=Tento systémovı soubor v %system% sloce chybí. Pøed pokraèováním této instalace musíte systém opravit s pomocí instalaèního CD operaèního systému.
+[Shield.MsiexecFile.Text.0x6]
+1=Denne systemfil mangler i mappen %system%. Reparer systemet vha. operativsysteminstallations-cd'en, før du fortsætter denne installation.
+[Shield.MsiexecFile.Text.0x7]
+1=Diese Systemdatei fehlt im %system% Ordner. Sie müssen das System mithilfe der Installations-CD für das Betriebssystem reparieren, bevor Sie mit der Installation fortfahren.
+[Shield.MsiexecFile.Text.0x8]
+1=Ôï áñ÷åßï óõóôŞìáôïò ëåßğåé áğü ôïí öÜêåëï %system%. Ğñİğåé íá åğéäéïñèşóåôå ôï óıóôçìá ÷ñçóéìïğïéşíôáò ôï CD åãêáôÜóôáóçò ëåéôïõñãéêïı óõóôŞìáôïò ğñéí óõíå÷ßóåôå áõôŞí ôçí åãêáôÜóôáóç.
+[Shield.MsiexecFile.Text.0x9]
+1=This system file is missing from %system% folder. You must repair the system using the operating system installation CD before continuing this installation.
+[Shield.MsiexecFile.Text.0xa]
+1=Falta este archivo de sistema en la carpeta %system%. Debe reparar el sistema utilizando el CD de instalación del sistema antes de continuar con la instalación.
+[Shield.MsiexecFile.Text.0xb]
+1=Tätä järjestelmätiedostoa ei ole %system%-kansiossa. Sinun on korjattava järjestelmä käyttöjärjestelmän asennus-CD:n avulla ennen kuin voit jatkaa tätä asennusta.
+[Shield.MsiexecFile.Text.0xc]
+1=Ce fichier système est introuvable dans le dossier %system%. Vous devez procéder à la réparation du système au moyen du CD d'installation du système d'exploitation avant de poursuivre cette installation.
+[Shield.MsiexecFile.Text.0xd]
+1=÷åáõ îòøëú æä çñø áúé÷ééä %îòøëú%. òìéê ìú÷ï àú äîòøëú áàîöòåú ú÷ìéèåø ääú÷ğä ùì îòøëú ääôòìä ìôğé ùúîùéê áäú÷ğä æå.
+[Shield.MsiexecFile.Text.0xe]
+1=Ez a rendszerfájl nem található meg a %system% mappában. A telepítés folytatása elõtt javítania kell a rendszert az operációs rendszer telepítõ CD-jével.
+[Shield.MsiexecFile.Text.0x10]
+1=Nella cartella %system% manca questo file di sistema. Ripristinare il sistema usando il CD di installazione del sistema operativo prima di continuare l'installazione.
+[Shield.MsiexecFile.Text.0x11]
+1=ƒVƒXƒeƒ€ ƒtƒ@ƒCƒ‹‚ª %system% ƒtƒHƒ‹ƒ_‚ÉŒ©‚Â‚©‚è‚Ü‚¹‚ñB‚±‚ÌƒCƒ“ƒXƒg[ƒ‹‚ğ‘±s‚·‚é‘O‚ÉAƒIƒyƒŒ[ƒeƒBƒ“ƒO ƒVƒXƒeƒ€‚ÌƒCƒ“ƒXƒg[ƒ‹ CD ‚ğg—p‚µ‚ÄƒVƒXƒeƒ€‚ğC•œ‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+[Shield.MsiexecFile.Text.0x12]
+1=%system% Æú´õ¿¡ ÀÌ ½Ã½ºÅÛ ÆÄÀÏÀÌ ¾ø½À´Ï´Ù. ¼³Ä¡¸¦ °è¼ÓÇÏ·Á¸é ¸ÕÀú ¿î¿µÃ¼Á¦ ¼³Ä¡ CD¸¦ »ç¿ëÇØ ½Ã½ºÅÛÀ» º¹±¸ÇØ¾ß ÇÕ´Ï´Ù.
+[Shield.MsiexecFile.Text.0x13]
+1=Dit systeembestand ontbreekt in de map %system%. U moet het systeem herstellen met de installatie-cd voor het besturingssysteem voordat u door kunt gaan met deze installatie.
+[Shield.MsiexecFile.Text.0x14]
+1=Denne systemfilen mangler i %system%-mappen. Du må reparere systemet ved hjelp av operativsystemets installerings-CD før du fortsetter installeringen.
+[Shield.MsiexecFile.Text.0x15]
+1=Brakuje tego pliku systemowego w folderze %system%. Przed kontynuowaniem instalacji konieczna jest naprawa systemu za pomoc¹ p³yty instalacyjnej systemu operacyjnego.
+[Shield.MsiexecFile.Text.0x16]
+1=Esse arquivo de sistema está ausente na pasta %system%. Você deve reparar o sistema usando o CD de instalação do sistema operacional para continuar com essa instalação.
+[Shield.MsiexecFile.Text.0x19]
+1=İòîò ñèñòåìíûé ôàéë îòñóòñòâóåò â ïàïêå %system%. Ïğåæäå ÷åì ïğîäîëæèòü óñòàíîâêó, íåîáõîäèìî âûïîëíèòü âîññòàíîâëåíèå ñèñòåìû ñ ïîìîùüş äèñêà óñòàíîâêè ÎÑ.
+[Shield.MsiexecFile.Text.0x1d]
+1=Den här systemfilen saknas i %system%-mappen. Du måste reparera systemet med hjälp av installations-CDn för operativsystemet innan du fortsätter med den här installationen.
+[Shield.MsiexecFile.Text.0x1f]
+1=Bu sistem dosyası %sistem% klasöründe eksik. Bu yüklemeye devam etmeden önce işletim sistemi kurulum CD'sini kullanarak sistemi onarmanız gerekiyor.
+[Shield.MsiexecFile.Text.0x804]
+1=%system% ÎÄ¼ş¼ĞÖĞÈ±ÉÙ´ËÏµÍ³ÎÄ¼ş¡£±ØĞëÔÚ¼ÌĞø´Ë°²×°Ö®Ç°Ê¹ÓÃ²Ù×÷ÏµÍ³°²×° CD ĞŞ¸´´ËÏµÍ³¡£
+[Shield.MsiexecFile.Text.0x404]
+1=¦b %system% ¸ê®Æ§¨¤¤¨S¦³¦¹¨t²ÎÀÉ¡C¦bÄ~Äò¦¹¦w¸Ë«e¡A±z¥²¶·¨Ï¥Î§@·~¨t²Î¦w¸Ë CD ­×´_¨t²Î¡C
+[DTSSList.501]
+minie=6.0.0.00000000
+minram=128
+MinDisk=6
+MinSysDisk=4
+InstallSpace=28
+[DTSSList.601_64]
+minie=6.0.0.00000000
+minram=128
+MinDisk=26
+MinSysDisk=4
+InstallSpace=28
+[DTSSList.601]
+minie=6.0.0.00000000
+minram=128
+MinDisk=25
+MinSysDisk=4
+InstallSpace=28
+[PRL.DTSSList]
+1=hpqbpl16.dat
+[ARP.DTSSList]
+UninstallKey=Shop for HP Supplies
+UpdateInfoURL=http://www.hp.com
+HelpLinkURL=http://www.hp.com/support
+DisplayVersion=%CUEVersion%
+DisplayName=Shop for HP Supplies
+DisplayIcon=%InstallDirX86%Digital Imaging\HPSSupply\hpzscr01.exe,0
+UninstallString=%InstallDirX86%Digital Imaging\HPSSupply\hpzscr01.exe -datfile hpqbud16.dat
+SWBucket=Yes
+[Onestopuninstall]
+1=[ARP.DTSSList]
+[MSI.DTSSList]
+1=DTSS
+RefCountKey=Shop for HP Supplies
+[DTSSList.0x1]
+DisplayName=ÇáÊÓæŞ áÔÑÇÁ ãÓÊáÒãÇÊ ııHP
+Description=íæİÑ ÇáæÕæá ÇáãÈÇÔÑ ÈÇáÇÊÕÇá áÔÑÇÁ ãÓÊáÒãÇÊ HP.
+[DTSSList.0x5]
+DisplayName=Nakupujte spotøební materiál HP
+Description=Poskytuje pøímı online pøístup k nákupu spotøebního materiálu HP.
+[DTSSList.0x6]
+DisplayName=Køb HP forbrugsvarer
+Description=Køb HP forbrugsvarer online.
+[DTSSList.0x7]
+DisplayName=Shop für HP Verbrauchsmaterialien
+Description=Direkter Zugriff auf online zu erwerbende HP Verbrauchsmaterialien.
+[DTSSList.0x8]
+DisplayName=ÁãïñÜ áíáëùóßìùí HP
+Description=Ğáñİ÷åé Üìåóç ğñüóâáóç online ãéá ôçí áãïñÜ áíáëşóéìùí HP.
+[DTSSList.0x9]
+DisplayName=Shop for HP Supplies
+Description=Provides direct, online access to purchase HP supplies.
+[DTSSList.0xa]
+DisplayName=Comprar consumibles HP
+Description=Ofrece acceso directo en línea para comprar suministros HP.
+[DTSSList.0xb]
+DisplayName=Osta HP-tarvikkeita
+Description=Tarjoaa suoran online-yhteyden HP-tarvikkeiden ostamiseen.
+[DTSSList.0xc]
+DisplayName=Acheter des consommables HP
+Description=Fournit un accès en ligne direct pour l'achat de consommables HP.
+[DTSSList.0xd]
+DisplayName=÷ğééú çåîøéí îúëìéí ùì HP
+Description=âéùä éùéøä åî÷ååğú ìøëéùú çåîøéí îúëìéí ùì HP.
+[DTSSList.0xe]
+DisplayName=HP tartozékok üzlete
+Description=Közvetlen, online hozzéférést biztosít HP tartozékok beszerzéséhez.
+[DTSSList.0x10]
+DisplayName=Acquista materiali di consumo HP
+Description=Fornisce l'accesso diretto online per acquistare i materiali di consumo HP.
+[DTSSList.0x11]
+DisplayName=HP ƒTƒvƒ‰ƒC•i‚Ìw“ü
+Description=HP ƒTƒvƒ‰ƒC‚Ìw“üƒTƒCƒg‚É’¼ÚƒAƒNƒZƒX‚Å‚«‚Ü‚·B
+[DTSSList.0x12]
+DisplayName=HP ¼Ò¸ğÇ° ±¸¸Å
+Description=HP ¼Ò¸ğÇ°À» ¿Â¶óÀÎ »ó¿¡¼­ Á÷Á¢ ±¸ÀÔÇÒ ¼ö ÀÖµµ·Ï µµ¿ÍÁİ´Ï´Ù.
+[DTSSList.0x13]
+DisplayName=HP-benodigdheden kopen
+Description=Biedt rechtstreekse onlinetoegang om HP-benodigdheden aan te schaffen.
+[DTSSList.0x14]
+DisplayName=Kjøp HP-rekvisita
+Description=Gir direkte elektronisk tilgang for kjøp av HP-rekvisita.
+[DTSSList.0x15]
+DisplayName=Zakup materia³ów eksploatacyjnych HP
+Description=Zapewnia mo¿liwoœæ bezpoœredniego zakupu materia³ów eksploatacyjnych HP przez Internet.
+[DTSSList.0x16]
+DisplayName=Comprar suprimentos HP
+Description=Oferece acesso on-line direto para comprar suprimentos HP.
+[DTSSList.0x19]
+DisplayName=Ïğèîáğåòåíèå ğàñõîäíûõ ìàòåğèàëîâ HP
+Description=Ïğåäîñòàâëÿåò íåïîñğåäñòâåííûé èíòåğàêòèâíûé äîñòóï äëÿ ïğèîáğåòåíèÿ ğàñõîäíûõ ìàòåğèàëîâ HP.
+[DTSSList.0x1d]
+DisplayName=Handla HP-tillbehör
+Description=Ger direkt tillgång till köp av HP-tillbehör online.
+[DTSSList.0x1f]
+DisplayName=HP Malzemeleri Alışverişi
+Description=HP sarf malzemelerine doğrudan, çevrimiçi erişim sağlar.
+[DTSSList.0x804]
+DisplayName=¹ºÂò HP ºÄ²Ä
+Description=´øÓĞÄÜ·½±ãÄú¹ºÂò HP ºÄ²ÄµÄÖ±½ÓÁª»ú·ÃÎÊ¹¦ÄÜ¡£
+[DTSSList.0x404]
+DisplayName=ÁÊ¶R HP ¯Ó§÷
+Description=¥iª½±µ¦b½u¤WÁÊ¶R HP ¯Ó§÷¡C
+[Setup.bitmap.DTSSList]
+1=%sourcepath%setup\HP_DesktopSureSupply.jpg
+[Setup.bitmap.DTSSList.text]
+1=Quickly and easily get original HP supplies online
+[Setup.bitmap.DTSSList.text.0x1]
+1=ÇáÍÕæá Úáì ãÓÊáÒãÇÊ HP ÇáÃÕáíÉ ÚÈÑ ÇáÅäÊÑäÊ ÈÓÑÚÉ æÓåæáÉ
+[Setup.bitmap.DTSSList.text.0x5]
+1=Originální spotøební materiál HP získejte online rychle a jednoduše
+[Setup.bitmap.DTSSList.text.0x6]
+1=Bestil nemt og hurtigt originale HP-forbrugsvarer online
+[Setup.bitmap.DTSSList.text.0x7]
+1=Original HP Zubehör schnell und bequem online bestellen
+[Setup.bitmap.DTSSList.text.0x8]
+1=ÁğïêôŞóôå online áõèåíôéêÜ áíáëşóéìá HP ãñŞãïñá êáé åıêïëá
+[Setup.bitmap.DTSSList.text.0x9]
+1=Quickly and easily get original HP supplies online
+[Setup.bitmap.DTSSList.text.0xa]
+1=Obtener en línea de forma rápida y sencilla consumibles HP originales
+[Setup.bitmap.DTSSList.text.0xb]
+1=Osta alkuperäiset HP-tarvikkeet nopeasti ja helposti verkossa
+[Setup.bitmap.DTSSList.text.0xc]
+1=Obtenez rapidement et aisément des consommables HP authentiques en ligne
+[Setup.bitmap.DTSSList.text.0xd]
+1=÷áì çåîøéí îúëìéí î÷åøééí ùì HP á÷ìåú åáîäéøåú áàåôï î÷ååï
+[Setup.bitmap.DTSSList.text.0xe]
+1=Eredeti HP kellékek gyors és egyszerû beszerzése online
+[Setup.bitmap.DTSSList.text.0x10]
+1=Il modo semplice e veloce per acquistare online materiali di consumo originali HP
+[Setup.bitmap.DTSSList.text.0x11]
+1=HP »ƒTƒvƒ‰ƒC•i‚ğƒIƒ“ƒ‰ƒCƒ“‚Å‚·‚Î‚â‚­ŠÈ’P‚É“üè‚Å‚«‚Ü‚·
+[Setup.bitmap.DTSSList.text.0x12]
+1=Á¤Ç° HP ¼Ò¸ğÇ°À» ¿Â¶óÀÎ »ó¿¡¼­ ½±°í ºü¸£°Ô ±¸ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+[Setup.bitmap.DTSSList.text.0x13]
+1=Snel en eenvoudig online originele HP-benodigdheden bestellen
+[Setup.bitmap.DTSSList.text.0x14]
+1=Skaff deg originale HP-rekvisita raskt og enkelt online
+[Setup.bitmap.DTSSList.text.0x15]
+1=Szybko i ³atwo kup oryginalne materia³y eksploatacyjne HP
+[Setup.bitmap.DTSSList.text.0x16]
+1=Adquira suprimentos originais HP online rapidamente e com facilidade
+[Setup.bitmap.DTSSList.text.0x19]
+1=Áûñòğîå è óäîáíîå ïğèîáğåòåíèå îğèãèíàëüíûõ ğàñõîäíûõ ìàòåğèàëîâ HP ÷åğåç Èíòåğíåò
+[Setup.bitmap.DTSSList.text.0x1d]
+1=Få snabbt och enkelt tag på HPs originaltillbehör online
+[Setup.bitmap.DTSSList.text.0x1f]
+1=Orijinal HP sarf malzemelerini hızlı ve kolayca  çevrimiçi olarak alın
+[Setup.bitmap.DTSSList.text.0x804]
+1=ÔÚÏß¿ìËÙ¼òµ¥»ñÈ¡Ô­×° HP ºÄ²Ä
+[Setup.bitmap.DTSSList.text.0x404]
+1=§Ö³t¥B»´ÃP¦a¦b½u¤W¨ú±o­ì¸Ë HP ¯Ó§÷
+[Old_DTSSList_Guids]
+1={7BCC0860-559E-489b-977B-C07048FDF9C0}
+2={F86DD775-9C2F-4250-A96C-12646F772244}
+3={5DD71755-5504-43c2-8B4A-946329D5F89F}
+[BucketsAvailable]
+1=[DTSSList]

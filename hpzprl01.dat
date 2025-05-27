@@ -1,0 +1,33 @@
+[CopyFiles]
+1=hpzscr%ICE_SUFFIX%.exe,%sourcepath%setup,%Preloadx86%setup
+2=%ProductScrubberDatFile%,%sourcepath%setup,%Preloadx86%setup
+3=%setupName%,%sourcepath%,%Preloadx86%
+4=%autorunName%,%autorunLocation%,%Preloadx86%
+5=hpzdui%ICE_SUFFIX%.exe,%sourcepath%setup,%Preloadx86%setup
+6=%setupStubName%,%sourcepath%,%Preloadx86%
+7=IsDialogBanner%DlgBmpExt%,%sourcepath%setup,%Preloadx86%setup
+8=IsDialogBitmap%DlgBmpExt%,%sourcepath%setup,%Preloadx86%setup
+9=*.*,%sourcepath%images,%Preloadx86%images
+10=hpzcdl01.exe,%sourcepath%\setup,%Preloadx86%setup
+11=hpzmsi01.exe,%sourcepath%setup,%Preloadx86%setup
+12=hpznop01.exe,%sourcepath%setup,%Preloadx86%setup
+13=hpzpsl01.exe,%sourcepath%setup,%Preloadx86%setup
+14=hpzrcn01.exe,%sourcepath%setup,%Preloadx86%setup
+15=shortcut.ico,%sourcepath%setup,%Preloadx86%setup
+16=HP_Setup_Help.chm,%sourcepath%\help\%lang%,%Preloadx86%help\%lang%
+CopySubFolders=Yes
+[CopyFiles.600]
+1=difxapi.dll,%sourcepath%setup,%Preloadx86%setup
+[CopyFiles.500]
+1=difxapi.dll,%sourcepath%setup,%Preloadx86%setup
+[CopyFiles.501]
+1=difxapi.dll,%sourcepath%setup,%Preloadx86%setup
+[CopyFiles.600_64]
+1=difxapi.dll,%sourcepath%setup\x64,%Preloadx86%setup\x64
+[CopyFiles.501_64]
+1=difxapi.dll,%sourcepath%setup\x64,%Preloadx86%setup\x64
+[Version]
+WebUpdateKey=%CDGuid%
+WebUpdateName=Uninstaller for PreloadICEEngineToGUIDFolder
+Provider=HP
+DriverVer=10/22/2008, 10.0.0.17.0

@@ -1,0 +1,64 @@
+;/*++
+;
+;Copyright (c) 1990-2002. Hewlett-Packard Company. All rights reserved.
+;
+;Hewlett-Packard AiO Division
+;Module Name:   hpounp09.INF
+;
+;Abstract:	This is the nullifier INF used to install no driver over DOT4 Print in Win2K/XP.
+;
+;	Magic Keyword for hpo 09 INF files	{b73d3ef6-ee91-466f-add9-29d56d27e0b6}
+;	do not remove is used by the scrubber
+;
+; ----- DO NOT MODIFY HEADER TEXT ABOVE THIS LINE! ------------
+;
+;--*/
+[Version]
+Signature="$Windows NT$"
+Class=Dot4Print
+ClassGUID={49ce6ac8-6f86-11d2-b1e5-0080c72e74a2}
+CatalogFile.NT=hpoF2400_u.cat
+Provider=%HP%
+DriverVer=09/17/2008,60.063.211.00
+[ControlFlags]
+ExcludeFromSelect = *
+[Manufacturer]
+%HP%=HP,NT.6,NTAMD64,NTAMD64.6
+[HP]
+"Deskjet F2400 (DOT4PRINT)"   = NULL_Inst,dot4prt\Vid_03F0&Pid_7611&mi_02&dot4&print_hpz
+[HP.NT.6]
+"Deskjet F2400 (DOT4PRINT)"   = NULL_Inst,dot4prt\Vid_03F0&Pid_7611&mi_02&dot4&print_hpz
+;======================================================================================
+;section having removed the string "dot4&print_hpz". 
+
+"Deskjet F2400 (DOT4PRINT)"   = NULL_Inst,dot4prt\Vid_03F0&Pid_7611&mi_02
+
+;========================================================================================
+[HP.NTAMD64]
+"Deskjet F2400 (DOT4PRINT)"   = NULL_Inst,dot4prt\Vid_03F0&Pid_7611&mi_02&print_hpz
+[HP.NTAMD64.6]
+"Deskjet F2400 (DOT4PRINT)"   = NULL_Inst,dot4prt\Vid_03F0&Pid_7611&mi_02
+
+
+[DestinationDirs]
+DefaultDestDir = 11
+[SourceDisksNames]
+1 = %CD%,,,
+[SourceDisksFiles]
+[Nothing]
+[NULL_Inst]
+; Nullify USB Storage
+Copyfiles = Nothing
+[NULL_Inst.NTAMD64]
+; Nullify USB Storage
+Copyfiles = Nothing
+[NULL_Inst.NTAMD64.6]
+; Nullify USB Storage
+Copyfiles = Nothing
+;====================================================
+[ClassInstall32]
+AddReg	 =Nothing
+CopyFiles=Nothing
+[strings]
+HP="Hewlett-Packard"
+CD="hp cd"

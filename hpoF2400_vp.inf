@@ -1,0 +1,125 @@
+;/*++
+;
+;Copyright (c) 2006-2020. Hewlett-Packard Company. All rights reserved.
+;
+;
+;	Dot4Usb INF for MS Vista
+;
+;	Hewlett-Packard Converged DOT4 version 12
+; Magic keyword is {0f03270f-c442-4a87-9fbf-87f308631f7e}
+;
+; ----- DO NOT MODIFY HEADER TEXT ABOVE THIS LINE! ------------
+;--*/
+;--------- Version Section ---------------------------------------------
+[Version]
+Signature="$Windows NT$"
+Provider=%INF_Provider%
+DriverVer=09/17/2008,1.0.0.0
+CatalogFile.NT=hpoF2400_vp.cat
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName="DOT4USB"
+[ControlFlags]
+ExcludeFromSelect=*
+[DestinationDirs]
+DefaultDestDir = 10,System32\drivers
+PreLoad_CoInstaller_CopyFile = 11
+[SourceInfo]
+SourceDirectory=%1%
+[SourceDisksNames.x86]
+1 = %CD%,,,
+2 = %CD%,,,"drivers\dot4\Win2000"
+[SourceDisksNames.amd64]
+1 = %CD%,,,
+2 = %CD%,,,"drivers\dot4\amd64\winxp"
+[SourceDisksFiles]
+hppldcoi.dll = 2
+difxapi.dll = 2
+;========================================
+[Manufacturer]
+%HP%=HP_Models,NTx86.6.0,NTAMD64.6.0
+;[HP_Models]
+;;=====================================Vista AMD 32 bit section======================================
+[HP_Models.NTx86.6.0]
+;Saffron
+"HP Deskjet F2400 series (DOT4USB)"   = DJF2400_D4Usb_Poll_Inst,USB\Vid_03F0&Pid_7611&mi_02
+;;=====================================Vista AMD 64 bit section=======================================
+[HP_Models.NTAMD64.6.0]
+;Saffron
+"HP Deskjet F2400 series (DOT4USB)"   = DJF2400_D4Usb_Poll_Inst,USB\Vid_03F0&Pid_7611&mi_02
+;Installer Section
+;
+[DJF2400_D4Usb_Poll_Inst.NT]
+Include=DOT4.INF
+Needs=DOT4USB_Inst.NT
+AddReg=MS_AddReg_USB,Dot4_AddReg_DJF2400,Dot4_UsePolling_AddReg,DOT4_Generic_Attributes_AddReg
+[DJF2400_D4Usb_Poll_Inst.NT.CoInstallers]
+AddReg=PreLoad_CoInstaller_AddReg
+CopyFiles=PreLoad_CoInstaller_CopyFile
+;====================================================
+;
+;Device specific Coinstaller
+;====================================================
+;
+; Registry Entry to start driver
+;
+[DOT4_Generic_Attributes_AddReg]
+HKR,%Policy%,%CreditOnZeroLength%,0x00010001,0x1
+HKR,%Policy%,%PiggyBackCredit%,0x00010001,0x1
+[Dot4_AddReg_DJF2400]
+HKR,%MS_Printer_Func%,%Desc_Val%,,"HP Deskjet F2400 series printer"
+[MS_AddReg_USB]
+HKR,,"LowerFilters",0x00010000,"dot4usb"
+[Dot4_UsePolling_AddReg]
+HKR,%Policy%,%UseInterruptEndPoint%,0x00010001,0x0
+;====================================================
+; Special configuration info for configuring whether interrupt polling is required or not
+[DJF2400_D4Usb_Poll_Inst.NT.HW]
+AddReg=MS_AddReg_USB,Dot4_AddReg_DJF2400,Dot4_UsePolling_AddReg,DOT4_Generic_Attributes_AddReg
+;=======================================
+;
+;Service Sections
+;
+[DJF2400_D4Usb_Poll_Inst.NT.Services]
+Include=DOT4.INF
+Needs=DOT4.Services
+AddService = dot4usb,,DOT4USB_Service_Inst
+;
+;  Register the coinstaller.
+;
+[PreLoad_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000,"hppldcoi.dll, PreloadDriverCoInstallEntryPoint"
+;
+; Copy Files
+;
+[PreLoad_CoInstaller_CopyFile]
+hppldcoi.dll,,,0x60
+difxapi.dll,,,0x60
+[DOT4USB_Service_Inst]
+DisplayName    = %MS_DOT4USB_NAME% "Dot4USB Filter"
+ServiceType    = 1 ;KERNEL_DRIVER
+StartType      = 3 ;DEMAND START
+ErrorControl   = 0 ;ERROR_IGNORE
+ServiceBinary  = %12%\dot4usb.sys
+LoadOrderGroup = extended base
+;====================================================
+[Strings]
+Dot4Usb_Name   = "USB to IEEE-1284.4 Translation Driver HPZius12"
+HP             = "Hewlett-Packard"
+INF_Provider   = "Hewlett-Packard"
+CD           = "hp cd"
+Dot4Usb_Setup_Ins_SvcDesc = "HPZius12"
+UFD_DOT4USB_NAME        = "HP Dot4USB Filter"
+Storage_Func	    	= "Functions\STORE_HPZ"
+MS_Printer_Func        	= "Functions\PRINT"
+Scanner_Func	    	= "Functions\SCAN_HPZ"
+Policy              	= "Policy"
+CreditOnZeroLength  	= "CreditOnZeroLength"
+UseInterruptEndPoint    = "UseInterruptEndPoint"
+PiggyBackCredit     	= "PiggyBackCredit"
+DJ450_USB_Device    	= "dj450 USB"
+HP_Device               = "HP Device"
+Desc_Val            	= "Description"
+Dot4Str             	= "printer card reader (HPZ12)"
+MS_DOT4USB_NAME		= "MS Dot4USB Filter"

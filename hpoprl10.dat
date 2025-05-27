@@ -1,0 +1,19 @@
+[CopyFiles]
+1=%division%mdl%COEXIST_RELEASE_NUM%.dat,.,%Preloadx86%
+2=HPZshl%ICE_SUFFIX%.exe,%sourcepath%setup,%Preloadx86%Setup
+3=hpqrrx08.exe,%sourcepath%util\ccc,%Preloadx86%\setup\
+4=%CD_NAME%_webreg.ini,.,%preloadx86%
+5=*.*,setup\Readme\%lang%,%InstallMain%\Help\%CD_NAME%_readme
+6=doccd.exe,%sourcepath%\setup,%Preloadx86%\setup\
+7=splash_photo.bmp,%sourcepath%\Setup\images,%Preloadx86%\Setup\images
+8=splash_title.bmp,%sourcepath%\Setup\images,%Preloadx86%\Setup\images
+9=hpzwrp01.exe,%sourcepath%setup,%Preloadx86%\setup\
+[CopyFiles.600]
+1=cioum32.msi,%sourcepath%drivers\dot4\wrapper,%Preloadx86%dot4Wrap
+[CopyFiles.600_64]
+1=cioum64.msi,%sourcepath%drivers\dot4\wrapper,%Preloadx86%dot4Wrap
+[Version]
+WebUpdateKey=%CDGuid%
+WebUpdateName=Uninstaller for Preload_PSL_Stuff
+Provider=HP
+DriverVer=03/19/2009, 10.0.0.17.0

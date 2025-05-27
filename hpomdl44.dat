@@ -1,0 +1,18 @@
+[HP Deskjet F2400 series]
+devicemodel=HP Deskjet F2400 series
+drivername=HP Deskjet F2400 series
+usbid=Vid_03F0&Pid_7611
+parbid=HPDeskjet_F2400_seri2386
+networkname=
+type=1
+numdevnodes=7
+Wirelesssupport=0
+PostCL0="%DD_PRELOAD_DIR%\HPZstub.exe" -psl -model "$ProdFullName$" -inst "$ContextID$" -rerun 4
+[HP Deskjet F2400 series.501]
+NumDevnodes=8
+[Run4.HP Deskjet F2400 series]
+launchbase=%Preloadx86%setup\
+1=%Preloadx86%\setup\hpzshl%ICE_SUFFIX%.exe -m PrintProjectShield
+2=%preloadx86%Setup\hpzshl%ICE_SUFFIX%.exe -m dot4Wrapcheck
+[Models]
+1=HP Deskjet F2400 series

@@ -1,0 +1,15 @@
+[CopyFiles]
+1=autorun.inf,%sourcepath%,%Preloadx86%
+2=BallonsInFloweredTree2.jpg,%sourcepath%images,%Preloadx86%images
+3=CarOnEuroBridge2.jpg,%sourcepath%images,%Preloadx86%images
+4=ColoredHousesHarbor2.jpg,%sourcepath%images,%Preloadx86%images
+5=ColoredPencils2.jpg,%sourcepath%images,%Preloadx86%images
+6=CountryRoad2.jpg,%sourcepath%images,%Preloadx86%images
+7=HpLogo.jpg,%sourcepath%images,%Preloadx86%images
+8=hpzcdl01.exe,%sourcepath%\setup,%Preloadx86%
+9=setup.exe,%sourcepath%,%Preloadx86%
+[Version]
+WebUpdateKey=%CDGuid%
+WebUpdateName=Uninstaller for PreloadRestingPad
+Provider=HP
+DriverVer=10/22/2008, 10.0.0.17.0
